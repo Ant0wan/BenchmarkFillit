@@ -6,11 +6,12 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/30 19:44:21 by abarthel          #+#    #+#              #
-#    Updated: 2018/12/30 21:56:16 by abarthel         ###   ########.fr        #
+#    Updated: 2018/12/30 22:00:31 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/bash
+echo ""
 echo ""
 echo ""
 echo "  \033[35m    _____ _____ __    ___               __                  __  "
@@ -19,8 +20,10 @@ echo "    / _// / / / / __/ / _  / -_) _ \\/ __/ _ \\/  ' \\/ _ \`/ __/  \'_/"
 echo "   /_/ /_/_/_/_/\__/ /____/\__/_//_/\__/_//_/_/_/_/\_,_/_/ /_/\\_\\    \033[0m"                                                            
 echo "                                   version \033[96m0.1\033[0m  script by \033[96mabarthel\033[0m"
 echo ""
+echo ""
+echo ""
 echo "\n\033[31m==================================\033[0m"
-echo "\033[31m= X       INVALID INPUT       X  =\033[0m"
+echo "\033[31m          INVALID INPUT       \033[0m"
 echo "\033[31m==================================\033[0m"
 
 echo "\n> filename: \033[92minv1.fillit\033[0m"
@@ -47,8 +50,9 @@ echo "\033[93min 0.003s\033[0m"
 echo "\n\033[92myours ↙\033[0m"
 time ./fillit invalid_sample.fillit
 
-echo "\\nn\033[32m=================================\033[0m"
-echo "\033[32m= >        VALID INPUT        < =\033[0m"
+echo ""
+echo "\n\n\033[32m=================================\033[0m"
+echo "\033[32m           VALID INPUT        \033[0m"
 echo "\033[32m=================================\033[0m"
 
 echo "\n> filename: \033[92mvalid_sample.fillit\033[0m"
