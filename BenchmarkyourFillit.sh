@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/30 19:44:21 by abarthel          #+#    #+#              #
-#    Updated: 2018/12/31 16:37:21 by abarthel         ###   ########.fr        #
+#    Updated: 2018/12/31 18:33:37 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -249,37 +249,37 @@ do
 			
 			echo "\n\n> filename: \033[92mvalid_sample2.fillit\033[0m"
 			echo "\033[94m.ABBBBE\nAA.CCCE\nFA.DDCE\nFGDDHHE\nFG.KKHH\nFGKKJJJ\n.GIIIIJ\033[0m"
-			echo "\033[93min 0.016s\033[0m"
+			echo "\033[93min 0.014s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit valid_sample2.fillit
 
 			echo "\n\n> filename: \033[92mbenchmark8.fillit\033[0m"
 			echo "\033[94m.AABB..\nAACCB..\n.CC.BDD\n.EE.DD.\nEEFFGG.\n.FFGGHH\n....HH.\033[0m"
-			echo "\033[93min 0.024s\033[0m"
+			echo "\033[93min 0.022s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit benchmark8.fillit
 
 			echo "\n\n> filename: \033[92mbenchmark9.fillit\033[0m"
 			echo "\033[94m.AABB..\nAACCB..\n.CC.B..\n.DDEEFF\nDDEEFF.\nIIIGGHH\n.IGGHH.\033[0m"
-			echo "\033[93min 0.023s\033[0m"
+			echo "\033[93min 0.021s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit benchmark9.fillit
 
 			echo "\n\n> filename: \033[92mbenchmark10.fillit\033[0m"
 			echo "\033[94m.AACCBB\nAACCDDB\n.EEDD.B\nEEFFGG.\n.FFGG..\nIIIHHJJ\n.IHHJJ.\033[0m"
-			echo "\033[93min 0.076s\033[0m"
+			echo "\033[93min 0.069s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit benchmark10.fillit
 
 			echo "\n\n> filename: \033[92mbenchmark13.fillit\033[0m"
 			echo "\033[94m.AABB.CC\nAADDBCC.\n.DD.B.EE\n.FFGGEE.\nFFGGHHJJ\nIIIHHJJ.\n.IKKLLMM\n.KKLLMM.\033[0m"
-			echo "\033[93min 0.093s\033[0m"
+			echo "\033[93min 0.086s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit benchmark13.fillit
 
 			echo "\n\n> filename: \033[92malphabet_valid_sample.fillit\033[0m"
 			echo "\033[94mAA..B.CDDDD\n.AABBCC.EGG\nFFFBICEEEGG\nHHFIIIJKK..\nHHL.M.J.KKO\n.LLMM.JJOOO\n.LWMNNNNPPP\nVWWQQ.XRRRP\nVVWQQXX.YRZ\nVSSTTTXYYZZ\nSS.TUUUUY.Z\033[0m"
-			echo "\033[93min 0.379s\033[0m"
+			echo "\033[93min 0.346s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit alphabet_valid_sample.fillit 
 			break
@@ -295,19 +295,19 @@ do
 
 			echo "\n\n> filename: \033[92mbenchmark11.fillit\033[0m"
 			echo "\033[94m.AABB.CC\nAADDBCC.\n.DD.BEE.\n.FF.EEGG\nFFHH.GG.\n.HHIIIJJ\n.KK.IJJ.\nKK......\033[0m"
-			echo "\033[93min 23.85s\033[0m"
+			echo "\033[93min 23.473s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit benchmark11.fillit
 
 			echo "\n\n> filename: \033[92mbenchmark12.fillit\033[0m"
 			echo "\033[94m.AABB.CC\nAADDBCC.\n.DD.BEE.\n.FF.EEGG\nFFHH.GG.\n.HH.III.\n.JJKKILL\nJJKK.LL.\033[0m"
-			echo "\033[93min 23.95s\033[0m"
+			echo "\033[93min 23.838s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit benchmark12.fillit
 
 			echo "\n\n> filename: \033[92mperfect_square_valid_sample.fillit\033[0m"
 			echo "\033[94mAABBBKEE\nACBKKKEE\nACCCFFJL\nDDDDFFJL\nHGGMNPJL\nHHGMNPJL\nIHGMNPOO\nIIIMNPOO\033[0m"
-			echo "\033[93min 1m32.502s\033[0m"
+			echo "\033[93min 1m29.170s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit perfect_square_valid_sample.fillit
 			break
