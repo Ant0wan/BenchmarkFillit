@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/30 19:44:21 by abarthel          #+#    #+#              #
-#    Updated: 2018/12/31 14:24:56 by abarthel         ###   ########.fr        #
+#    Updated: 2018/12/31 16:34:19 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ do
 			echo "\n\033[92myours ↙\033[0m"
 			s2="error"
 			s1=$(time ./fillit inv1.fillit)
-			echo $s1
+			echo "$s1"
 			ft_compare $s1 $s2	
 
 			echo "\n\n> filename: \033[92minv2.fillit\033[0m"
@@ -77,7 +77,7 @@ do
 			echo "\n\033[92myours ↙\033[0m"
 			s2="error"
 			s1=$(time ./fillit inv2.fillit)
-			echo $s1
+			echo "$s1"
 			ft_compare $s1 $s2	
 
 			echo "\n\n> filename: \033[92minv3.fillit\033[0m"
@@ -86,7 +86,7 @@ do
 			echo "\n\033[92myours ↙\033[0m"
 			s2="error"
 			s1=$(time ./fillit inv3.fillit)
-			echo $s1
+			echo "$s1"
 			ft_compare $s1 $s2	
 
 			echo "\n\n> filename: \033[92minvalid_sample.fillit\033[0m"
@@ -95,7 +95,16 @@ do
 			echo "\n\033[92myours ↙\033[0m"
 			s2="error"
 			s1=$(time ./fillit invalid_sample.fillit)
-			echo $s1
+			echo "$s1"
+			ft_compare $s1 $s2	
+			
+			echo "\n\n> filename: \033[92mtoomuch.fillit\033[0m"
+			echo "\033[94merror\033[0m"
+			echo "\033[93min 0.003s\033[0m"
+			echo "\n\033[92myours ↙\033[0m"
+			s2="error"
+			s1=$(time ./fillit toomuch.fillit)
+			echo "$s1"
 			ft_compare $s1 $s2	
 			break
 			;;
@@ -209,6 +218,18 @@ do
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit lines18bis.fillit
+			
+			echo "\n\n> filename: \033[92msquareinvert3x3_2tetri.fillit\033[0m"
+			echo "\033[94mBBB\nB.A\nAAA\033[0m"
+			echo "\033[93min 0.003s\033[0m"
+			echo "\n\033[92myours ↙\033[0m"
+			time ./fillit squareinvert3x3_2tetri.fillit
+			
+			echo "\n\n> filename: \033[92mtwopiecestricky.fillit\033[0m"
+			echo "\033[94mABB.\nABB.\nA...\nA...\033[0m"
+			echo "\033[93min 0.003s\033[0m"
+			echo "\n\033[92myours ↙\033[0m"
+			time ./fillit twopiecestricky.fillit
 			break
 			;;
 
