@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/30 19:44:21 by abarthel          #+#    #+#              #
-#    Updated: 2018/12/31 18:33:37 by abarthel         ###   ########.fr        #
+#    Updated: 2018/12/31 18:55:00 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -321,7 +321,7 @@ do
 			echo "\033[35m=====================================\033[0m"
 			sleep 1
 
-			echo "\033[32m\n    Please, make yourself confortable, this will take a long time... \xE2\x98\x95 \033[0m"
+			echo "\033[32m\n    Please, make yourself comfortable, this will take a long time... \xE2\x98\x95 \033[0m"
 			echo "\n"
 			sleep 1
 
