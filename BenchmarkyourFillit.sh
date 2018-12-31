@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/30 19:44:21 by abarthel          #+#    #+#              #
-#    Updated: 2018/12/31 13:11:01 by abarthel         ###   ########.fr        #
+#    Updated: 2018/12/31 14:24:56 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,27 @@ echo ""
 echo ""
 echo ""
 sleep 1
+
+# Functions
+s1=""
+s2=""
+ft_contains() {
+	if [ $s1 == *"$s2" ]
+		then
+			echo "\t\033[32m[OK]\033[0m"
+		else
+			echo "\t\033[31m[KO]\033[0m"
+	fi
+}
+
+ft_compare() {
+	if [ "$s1" == "$s2" ]
+		then
+			echo "\t\033[32m[OK]\033[0m"
+		else
+			echo "\t\033[31m[KO]\033[0m"
+	fi
+}
 
 # Select Case && Menu
 COLUMNS=12
@@ -45,25 +66,37 @@ do
 			echo "\033[94merror\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit inv1.fillit
+			s2="error"
+			s1=$(time ./fillit inv1.fillit)
+			echo $s1
+			ft_compare $s1 $s2	
 
 			echo "\n\n> filename: \033[92minv2.fillit\033[0m"
 			echo "\033[94merror\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit inv2.fillit
+			s2="error"
+			s1=$(time ./fillit inv2.fillit)
+			echo $s1
+			ft_compare $s1 $s2	
 
 			echo "\n\n> filename: \033[92minv3.fillit\033[0m"
 			echo "\033[94merror\033[0m"
 			echo "\033[93min 0.002s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit inv3.fillit
+			s2="error"
+			s1=$(time ./fillit inv3.fillit)
+			echo $s1
+			ft_compare $s1 $s2	
 
 			echo "\n\n> filename: \033[92minvalid_sample.fillit\033[0m"
 			echo "\033[94merror\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit invalid_sample.fillit
+			s2="error"
+			s1=$(time ./fillit invalid_sample.fillit)
+			echo $s1
+			ft_compare $s1 $s2	
 			break
 			;;
 
@@ -76,7 +109,7 @@ do
 			sleep 1
 
 			echo "\n> filename: \033[92mvalid_sample.fillit\033[0m"
-			echo "\033[94mBBBB\nACCC.\nA..C.\nADD..\nDD...\033[0m"
+			echo "\033[94mABBBB\nACCC.\nA..C.\nADD..\nDD...\033[0m"
 			echo "\033[93min 0.004s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			time ./fillit valid_sample.fillit
