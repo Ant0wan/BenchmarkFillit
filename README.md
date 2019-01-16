@@ -1,5 +1,7 @@
 # BenchmarkyourFillit
 
+This script has been made for benchmarking <a href="https://cdn.intra.42.fr/pdf/pdf/886/fillit.en.pdf" target="_blank">Fillit [a 42 project]</a>.
+
 ---
 
 ## Installation
@@ -37,6 +39,9 @@ There are 5 test sets:
 #### Checking parsing
 
 - Test invalid inputs
+
+The purpose is to check if ./fillit is handling
+
 
 #### Depending on difficulty
 
