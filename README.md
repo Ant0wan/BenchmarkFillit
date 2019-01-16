@@ -28,9 +28,15 @@ cp -f [your_fillit_binary] BenchmarkyourFillit/
 
 ---
 
-## Select appropriate testing sets
+## Select appropriate testing set
 
-There are 5 levels of tests: 4 depending on difficulty and 1 checking parsing
+There are 5 test sets:
+- 1 checking parsing
+- 4 depending on difficulty
+
+### Checking parsing
+
+- Test invalid inputs
 
 ### Depending on difficulty
 
@@ -38,11 +44,6 @@ There are 5 levels of tests: 4 depending on difficulty and 1 checking parsing
 - Easy tests
 - Medium tests
 - Hardcore tests
-
-### Checking parsing
-
-- Test invalid inputs
-
 
 ---
 
