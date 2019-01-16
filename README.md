@@ -1,4 +1,4 @@
-# BenchmarkyourFillit [![LaunchinBenchmark](https://i.imgur.com/9NXfcit.jpg)](i.imgur.com/9NXfcit.jpg)
+# BenchmarkyourFillit [![42](https://i.imgur.com/9NXfcit.jpg)](i.imgur.com/9NXfcit.jpg)
 
 This script has been made for benchmarking <a href="https://cdn.intra.42.fr/pdf/pdf/886/fillit.en.pdf" target="_blank">Fillit [a 42 project]</a>.
 
@@ -118,4 +118,4 @@ unknown
 
 ## Usage demo
 
-<a href="https://asciinema.org/a/a9dNz7LOjWMecmT9RbcFXKvel" target="_blank"><img src="https://asciinema.org/a/a9dNz7LOjWMecmT9RbcFXKvel.svg" /></a>
+[![DemoUsage](https://i.imgur.com/5273vVd.gifv)](i.imgur.com/5273vVd.gifv)
