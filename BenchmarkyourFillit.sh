@@ -28,21 +28,13 @@ sleep 1
 # Functions
 s1=""
 s2=""
-ft_contains() {
-	if [ $s1 == *"$s2"* ]
-		then
-			echo "\t\033[32m[OK]\033[0m"
-		else
-			echo "\t\033[31m[KO]\033[0m"
-	fi
-}
 
 ft_compare() {
 	if [ "$s1" == "$s2" ]
 		then
-			echo "\t\033[32m[OK]\033[0m"
+			echo "\033[32m[OK]\033[0m"
 		else
-			echo "\t\033[31m[KO]\033[0m"
+			echo "\033[31m[KO]\033[0m"
 	fi
 }
 
@@ -67,43 +59,47 @@ do
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			s2="error"
-			s1=$(time ./fillit inv1.fillit)
+			s1=$(time ./fillit tests/inv1.fillit)
 			echo "$s1"
 			ft_compare $s1 $s2	
 
-			echo "\n\n> filename: \033[92minv2.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92minv2.fillit\033[0m"
 			echo "\033[94merror\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			s2="error"
-			s1=$(time ./fillit inv2.fillit)
+			s1=$(time ./fillit tests/inv2.fillit)
 			echo "$s1"
 			ft_compare $s1 $s2	
 
-			echo "\n\n> filename: \033[92minv3.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92minv3.fillit\033[0m"
 			echo "\033[94merror\033[0m"
 			echo "\033[93min 0.002s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			s2="error"
-			s1=$(time ./fillit inv3.fillit)
+			s1=$(time ./fillit tests/inv3.fillit)
 			echo "$s1"
 			ft_compare $s1 $s2	
 
-			echo "\n\n> filename: \033[92minvalid_sample.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92minvalid_sample.fillit\033[0m"
 			echo "\033[94merror\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			s2="error"
-			s1=$(time ./fillit invalid_sample.fillit)
+			s1=$(time ./fillit tests/invalid_sample.fillit)
 			echo "$s1"
 			ft_compare $s1 $s2	
 			
-			echo "\n\n> filename: \033[92mtoomuch.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mtoomuch.fillit\033[0m"
 			echo "\033[94merror\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
 			s2="error"
-			s1=$(time ./fillit toomuch.fillit)
+			s1=$(time ./fillit tests/toomuch.fillit)
 			echo "$s1"
 			ft_compare $s1 $s2	
 			break
@@ -121,115 +117,133 @@ do
 			echo "\033[94mABBBB\nACCC.\nA..C.\nADD..\nDD...\033[0m"
 			echo "\033[93min 0.004s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit valid_sample.fillit
+			time ./fillit tests/valid_sample.fillit
 
-			echo "\n\n> filename: \033[92mvalid_sample_easy.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mvalid_sample_easy.fillit\033[0m"
 			echo "\033[94mABCD.\nABCD.\nABCD.\nABCDE\n..EEE\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit valid_sample_easy.fillit
+			time ./fillit tests/valid_sample_easy.fillit
 
-			echo "\n\n> filename: \033[92mvalid_subject_perfect.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mvalid_subject_perfect.fillit\033[0m"
 			echo "\033[94mDDAA\nCDDA\nCCCA\nBBBB\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit valid_subject_perfect.fillit
+			time ./fillit tests/valid_subject_perfect.fillit
 
-			echo "\n\n> filename: \033[92msingle_square.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92msingle_square.fillit\033[0m"
 			echo "\033[94mAA\nAA\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit single_square.fillit
+			time ./fillit tests/single_square.fillit
 
-			echo "\n\n> filename: \033[92msample_subject1.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92msample_subject1.fillit\033[0m"
 			echo "\033[94mABBBB.\nACCCEE\nAFFCEE\nA.FFGG\nHHHDDG\n.HDD.G\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit sample_subject1.fillit
+			time ./fillit tests/sample_subject1.fillit
 
-			echo "\n\n> filename: \033[92mhardcore18.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mhardcore18.fillit\033[0m"
 			echo "\033[94mAAAABBBB.\nCCCCDDDD.\nEEFFFF.M.\nEEGGGG.MM\nHHHHIIIIM\nJJJJKKKK.\nLLLLQNNNN\nOOOOQQPP.\nRRRR.Q.PP\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit hardcore18.fillit
+			time ./fillit tests/hardcore18.fillit
 
-			echo "\n\n> filename: \033[92mfillit benchmark3.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mfillit benchmark3.fillit\033[0m"
 			echo "\033[94m.AA.\nAABB\n.CCB\nCC.B\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark3.fillit
+			time ./fillit tests/benchmark3.fillit
 
-			echo "\n\n> filename: \033[92mfillit benchmark4.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mfillit benchmark4.fillit\033[0m"
 			echo "\033[94m.AABB\nAACCB\n.CC.B\n.DD..\nDD...\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark4.fillit
+			time ./fillit tests/benchmark4.fillit
 
-			echo "\n\n> filename: \033[92mfillit benchmark5.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mfillit benchmark5.fillit\033[0m"
 			echo "\033[94m.AABB\nAACCB\n.CC.B\n.DDEE\nDDEE.\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark5.fillit
+			time ./fillit tests/benchmark5.fillit
 
-			echo "\n\n> filename: \033[92mfillit benchmark6.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mfillit benchmark6.fillit\033[0m"
 			echo "\033[94m.AABB.\nAACCB.\n.CC.B.\n.DDEE.\nDDEEFF\n...FF.\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark6.fillit
+			time ./fillit tests/benchmark6.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark7.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark7.fillit\033[0m"
 			echo "\033[94m.AACC.\nAACCBB\n.DDEEB\nDDEE.B\n.FFGG.\nFFGG..\033[0m"
 			echo "\033[93min 0.004s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark7.fillit
+			time ./fillit tests/benchmark7.fillit
 
-			echo "\n\n> filename: \033[92mlines.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mlines.fillit\033[0m"
 			echo "\033[94mAAAABBBB.\nCCCCDDDD.\nEEEEFFFF.\nGGGGHHHH.\nIIIIJJJJ.\nKKKKLLLL.\nMMMMNNNN.\nOOOOPPPP.\nQQQQRRRR.\033[0m"
 			echo "\033[93min 0.004s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit lines.fillit
+			time ./fillit tests/lines.fillit
 
-			echo "\n\n> filename: \033[92mlines15.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mlines15.fillit\033[0m"
 			echo "\033[94mAAAABBBB\nCCCCDDDD\nEEEEFFFF\nGGGGHHHH\nIIIIJJJJ\nKKKKLLLL\nMMMMNNNN\nOOOO....\033[0m"
 			echo "\033[93min 0.005s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit lines15.fillit
+			time ./fillit tests/lines15.fillit
 
-			echo "\n\n> filename: \033[92mlines16.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mlines16.fillit\033[0m"
 			echo "\033[94mAAAABBBB\nCCCCDDDD\nEEEEFFFF\nGGGGHHHH\nIIIIJJJJ\nKKKKLLLL\nMMMMNNNN\nOOOOPPPP\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit lines16.fillit
+			time ./fillit tests/lines16.fillit
 
-			echo "\n\n> filename: \033[92mlines17.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mlines17.fillit\033[0m"
 			echo "\033[94mAAAABBBB.\nCCCCDDDD.\nEEEEFFFF.\nGGGGHHHH.\nIIIIJJJJ.\nKKKKLLLL.\nMMMMNNNN.\nOOOOPPPP.\nQQQQ.....\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit lines17.fillit
+			time ./fillit tests/lines17.fillit
 
-			echo "\n\n> filename: \033[92mlines18.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mlines18.fillit\033[0m"
 			echo "\033[94mAAAABBBB.\nCCCCDDDD.\nEEEEFFFF.\nGGGGHHHH.\nIIIIJJJJ.\nKKKKLLLL.\nMMMMNNNN.\nOOOOPPPP.\nQQQQRRRR.\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit lines18.fillit
+			time ./fillit tests/lines18.fillit
 
-			echo "\n\n> filename: \033[92mlines18bis.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mlines18bis.fillit\033[0m"
 			echo "\033[94mAAAABBBBR\nCCCCDDDDR\nEEEEFFFFR\nGGGGHHHHR\nIIIIJJJJ.\nKKKKLLLL.\nMMMMNNNN.\nOOOOPPPP.\nQQQQ.....\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit lines18bis.fillit
+			time ./fillit tests/lines18bis.fillit
 			
-			echo "\n\n> filename: \033[92msquareinvert3x3_2tetri.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92msquareinvert3x3_2tetri.fillit\033[0m"
 			echo "\033[94mBBB\nB.A\nAAA\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit squareinvert3x3_2tetri.fillit
+			time ./fillit tests/squareinvert3x3_2tetri.fillit
 			
-			echo "\n\n> filename: \033[92mtwopiecestricky.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mtwopiecestricky.fillit\033[0m"
 			echo "\033[94mABB.\nABB.\nA...\nA...\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit twopiecestricky.fillit
+			time ./fillit tests/twopiecestricky.fillit
 			break
 			;;
 
@@ -245,43 +259,49 @@ do
 			echo "\033[94m.AABB.CCDD\nAAEEBCCDD.\n.EE.BFFGG.\n.HH.FFGGJJ\nHHIIIKKJJ.\n.LLIKKMMOO\nLLNNNMMOOQ\n.PPNT.RR.Q\nPPSSTRRUUQ\n.SS.TTUU.Q\033[0m"
 			echo "\033[93min 0.003s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark21.fillit
+			time ./fillit tests/benchmark21.fillit
 			
-			echo "\n\n> filename: \033[92mvalid_sample2.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mvalid_sample2.fillit\033[0m"
 			echo "\033[94m.ABBBBE\nAA.CCCE\nFA.DDCE\nFGDDHHE\nFG.KKHH\nFGKKJJJ\n.GIIIIJ\033[0m"
 			echo "\033[93min 0.014s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit valid_sample2.fillit
+			time ./fillit tests/valid_sample2.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark8.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark8.fillit\033[0m"
 			echo "\033[94m.AABB..\nAACCB..\n.CC.BDD\n.EE.DD.\nEEFFGG.\n.FFGGHH\n....HH.\033[0m"
 			echo "\033[93min 0.022s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark8.fillit
+			time ./fillit tests/benchmark8.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark9.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark9.fillit\033[0m"
 			echo "\033[94m.AABB..\nAACCB..\n.CC.B..\n.DDEEFF\nDDEEFF.\nIIIGGHH\n.IGGHH.\033[0m"
 			echo "\033[93min 0.021s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark9.fillit
+			time ./fillit tests/benchmark9.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark10.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark10.fillit\033[0m"
 			echo "\033[94m.AACCBB\nAACCDDB\n.EEDD.B\nEEFFGG.\n.FFGG..\nIIIHHJJ\n.IHHJJ.\033[0m"
 			echo "\033[93min 0.069s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark10.fillit
+			time ./fillit tests/benchmark10.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark13.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark13.fillit\033[0m"
 			echo "\033[94m.AABB.CC\nAADDBCC.\n.DD.B.EE\n.FFGGEE.\nFFGGHHJJ\nIIIHHJJ.\n.IKKLLMM\n.KKLLMM.\033[0m"
 			echo "\033[93min 0.086s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark13.fillit
+			time ./fillit tests/benchmark13.fillit
 
-			echo "\n\n> filename: \033[92malphabet_valid_sample.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92malphabet_valid_sample.fillit\033[0m"
 			echo "\033[94mAA..B.CDDDD\n.AABBCC.EGG\nFFFBICEEEGG\nHHFIIIJKK..\nHHL.M.J.KKO\n.LLMM.JJOOO\n.LWMNNNNPPP\nVWWQQ.XRRRP\nVVWQQXX.YRZ\nVSSTTTXYYZZ\nSS.TUUUUY.Z\033[0m"
 			echo "\033[93min 0.346s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit alphabet_valid_sample.fillit 
+			time ./fillit tests/alphabet_valid_sample.fillit 
 			break
 			;;
 
@@ -297,19 +317,21 @@ do
 			echo "\033[94m.AABB.CC\nAADDBCC.\n.DD.BEE.\n.FF.EEGG\nFFHH.GG.\n.HHIIIJJ\n.KK.IJJ.\nKK......\033[0m"
 			echo "\033[93min 23.473s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark11.fillit
+			time ./fillit tests/benchmark11.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark12.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark12.fillit\033[0m"
 			echo "\033[94m.AABB.CC\nAADDBCC.\n.DD.BEE.\n.FF.EEGG\nFFHH.GG.\n.HH.III.\n.JJKKILL\nJJKK.LL.\033[0m"
 			echo "\033[93min 23.838s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark12.fillit
+			time ./fillit tests/benchmark12.fillit
 
-			echo "\n\n> filename: \033[92mperfect_square_valid_sample.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mperfect_square_valid_sample.fillit\033[0m"
 			echo "\033[94mAABBBKEE\nACBKKKEE\nACCCFFJL\nDDDDFFJL\nHGGMNPJL\nHHGMNPJL\nIHGMNPOO\nIIIMNPOO\033[0m"
 			echo "\033[93min 1m29.170s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit perfect_square_valid_sample.fillit
+			time ./fillit tests/perfect_square_valid_sample.fillit
 			break
 			;;
 
@@ -329,73 +351,84 @@ do
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark14.fillit
+			time ./fillit tests/benchmark14.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark15.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark15.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark15.fillit
+			time ./fillit tests/benchmark15.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark16.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark16.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark16.fillit
+			time ./fillit tests/benchmark16.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark17.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark17.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark17.fillit
+			time ./fillit tests/benchmark17.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark22.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark22.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark22.fillit
+			time ./fillit tests/benchmark22.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark.fillit
+			time ./fillit tests/benchmark.fillit
 
-			echo "\n\n> filename: \033[92mlines19.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mlines19.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit lines19.fillit
+			time ./fillit tests/lines19.fillit
 
-			echo "\n\n> filename: \033[92mlines20.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mlines20.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit lines20.fillit
+			time ./fillit tests/lines20.fillit
 
-			echo "\n\n> filename: \033[92mlines26.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mlines26.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit lines26.fillit
+			time ./fillit tests/lines26.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark18.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark18.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark18.fillit
+			time ./fillit tests/benchmark18.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark19.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark19.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark19.fillit
+			time ./fillit tests/benchmark19.fillit
 
-			echo "\n\n> filename: \033[92mbenchmark20.fillit\033[0m"
+			echo "\n\n------"
+			echo "> filename: \033[92mbenchmark20.fillit\033[0m"
 			echo "\033[94munknown\033[0m"
 			echo "\033[93min n.a. s\033[0m"
 			echo "\n\033[92myours ↙\033[0m"
-			time ./fillit benchmark20.fillit
+			time ./fillit tests/benchmark20.fillit
 			break
 			;;
 
