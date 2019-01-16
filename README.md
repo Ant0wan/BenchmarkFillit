@@ -24,6 +24,10 @@ cp -f [your_fillit_binary] BenchmarkyourFillit/
 ./benchmarkyourFillit.sh
 ```
 
+[![LaunchinBenchmark](https://i.imgur.com/AQqrLFn.png)](i.imgur.com/AQqrLFn.png)
+
+---
+
 ## Select appropriate testing sets
 
 - Pass files as arguments without non-interactive mode enabled to interprete commands in those files
