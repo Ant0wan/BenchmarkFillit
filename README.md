@@ -68,7 +68,7 @@ cat inv3.fillit
 
 Invalid usage of arguments:
 ```
-./fillit /dev/urandom
+./fillit .
 ```
 
 #### Depending on level of difficulty

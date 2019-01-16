@@ -102,6 +102,26 @@ do
 			s1=$(time ./fillit tests/toomuch.fillit)
 			echo "$s1"
 			ft_compare $s1 $s2	
+
+			echo "\n\n------"
+			echo "> filename: \033[92m/dev/urandom\033[0m"
+			echo "\033[94merror\033[0m"
+			echo "\033[93min 0.003s\033[0m"
+			echo "\n\033[92myours ↙\033[0m"
+			s2="error"
+			s1=$(time ./fillit /dev/urandom)
+			echo "$s1"
+			ft_compare $s1 $s2	
+	
+			echo "\n\n------"
+			echo "> argument usage: \033[92m.\033[0m"
+			echo "\033[94merror\033[0m"
+			echo "\033[93min 0.003s\033[0m"
+			echo "\n\033[92myours ↙\033[0m"
+			s2="error"
+			s1=$(time ./fillit .)
+			echo "$s1"
+			ft_compare $s1 $s2	
 			break
 			;;
 
