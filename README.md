@@ -118,4 +118,4 @@ unknown
 
 ## Usage demo
 
-[![DemoUsage](https://i.imgur.com/5273vVd.gifv)](i.imgur.com/5273vVd.gifv)
+[![DemoUsage](https://i.imgur.com/5273vVd.gif)](i.imgur.com/5273vVd.gif)
