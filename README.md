@@ -44,6 +44,7 @@ It checks if ./fillit is handling typical error cases concerning argument usages
 
 Invalid input sample:
 ```
+cat inv3.fillit
 #..#
 ...#
 ...#
@@ -63,6 +64,11 @@ Invalid input sample:
 ..##
 .##.
 ....
+```
+
+Invalid usage of arguments:
+```
+./fillit /dev/urandom
 ```
 
 #### Depending on level of difficulty
