@@ -96,6 +96,7 @@ EEFFGG.
 ```
 
 - Medium tests
+
 In this set, your backtracking will be put to the test !
 
 Output sample:
