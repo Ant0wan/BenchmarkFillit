@@ -74,6 +74,7 @@ Invalid usage of arguments:
 #### Depending on level of difficulty
 
 - Super easy tests
+
 Output sample:
 ```
 BBB
@@ -82,6 +83,7 @@ AAA
 ```
 
 - Easy tests
+
 Output sample:
 ```
 .AABB..
@@ -95,6 +97,7 @@ EEFFGG.
 
 - Medium tests
 In this set, your backtracking will be put to the test !
+
 Output sample:
 ```
 AABBBKEE
@@ -109,6 +112,7 @@ IIIMNPOO
 
 - Hardcore tests
 So far, no one succeeded these tests...
+
 Output sample:
 ```
 unknown
