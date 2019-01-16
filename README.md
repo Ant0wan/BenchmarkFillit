@@ -4,13 +4,13 @@
 
 ## Installation
 
-- Clone BenchmarkyourFillit
+Clone BenchmarkyourFillit
 
 ```shell=
 git clone https://github.com/Ant0wan/BenchmarkyourFillit.git
 ```
 
-- Copy your fillit(binary) in the repository:
+Copy your fillit(binary) in the repository:
 
 ```shell=
 cp -f [your_fillit_binary] BenchmarkyourFillit/
@@ -24,15 +24,27 @@ cp -f [your_fillit_binary] BenchmarkyourFillit/
 ./benchmarkyourFillit.sh
 ```
 
-You should have the following output
-
 [![LaunchinBenchmark](https://i.imgur.com/1XyUxwu.png)](i.imgur.com/1XyUxwu.png)
 
 ---
 
 ## Select appropriate testing sets
 
-- Pass files as arguments without non-interactive mode enabled to interprete commands in those files
+There are 5 levels of tests: 4 depending on difficulty and 1 checking parsing
+
+### Depending on difficulty
+
+- Super easy tests
+- Easy tests
+- Medium tests
+- Hardcore tests
+
+### Checking parsing
+
+- Test invalid inputs
+
+
+---
 
 ## Usage demo
 
