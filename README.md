@@ -34,21 +34,79 @@ cp -f [your_fillit_binary] BenchmarkyourFillit/
 
 There are 5 test sets:
 - 1 checking parsing
-- 4 depending on difficulty
+- 4 depending on the level of difficulty
 
 #### Checking parsing
 
 - Test invalid inputs
 
-The purpose is to check if ./fillit is handling
+It checks if ./fillit is handling typical error cases concerning argument usages and the input validity.
 
+Invalid input sample:
+```
+#..#
+...#
+...#
+....
 
-#### Depending on difficulty
+....
+....
+....
+####
+
+.###
+...#
+....
+....
+
+....
+..##
+.##.
+....
+```
+
+#### Depending on level of difficulty
 
 - Super easy tests
+Output sample:
+```
+BBB
+B.A
+AAA
+```
+
 - Easy tests
+Output sample:
+```
+.AABB..
+AACCB..
+.CC.BDD
+.EE.DD.
+EEFFGG.
+.FFGGHH
+....HH.
+```
+
 - Medium tests
+In this set, your backtracking will be put to the test !
+Output sample:
+```
+AABBBKEE
+ACBKKKEE
+ACCCFFJL
+DDDDFFJL
+HGGMNPJL
+HHGMNPJL
+IHGMNPOO
+IIIMNPOO
+```
+
 - Hardcore tests
+So far, no one succeeded these tests...
+Output sample:
+```
+unknown
+```
 
 ---
 
