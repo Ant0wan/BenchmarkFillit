@@ -34,11 +34,11 @@ There are 5 test sets:
 - 1 checking parsing
 - 4 depending on difficulty
 
-### Checking parsing
+#### Checking parsing
 
 - Test invalid inputs
 
-### Depending on difficulty
+#### Depending on difficulty
 
 - Super easy tests
 - Easy tests
