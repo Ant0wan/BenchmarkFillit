@@ -24,7 +24,9 @@ cp -f [your_fillit_binary] BenchmarkyourFillit/
 ./benchmarkyourFillit.sh
 ```
 
-[![LaunchinBenchmark](https://i.imgur.com/AQqrLFn.png)](i.imgur.com/AQqrLFn.png)
+You should have the following output
+
+[![LaunchinBenchmark](https://i.imgur.com/1XyUxwu.png)](i.imgur.com/1XyUxwu.png)
 
 ---
 
