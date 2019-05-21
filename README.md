@@ -1,6 +1,6 @@
 # BenchmarkyourFillit [![42](https://i.imgur.com/9NXfcit.jpg)](i.imgur.com/9NXfcit.jpg)[![freetime](https://i.imgur.com/8IcDLkc.png)](i.imgur.com/8IcDLkc.png) 
 [![HitCount](http://hits.dwyl.io/Ant0wan/BenchmarkyourFillit.svg)](http://hits.dwyl.io/Ant0wan/BenchmarkyourFillit)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2ab976e57d6c4033b8f4f96586d955fa)](https://www.codacy.com/app/Ant0wan/BenchmarkyourFillit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ant0wan/BenchmarkyourFillit&amp;utm_campaign=Badge_Grade)
 
 This script has been made for benchmarking <a href="https://github.com/Ant0wan/Fillit.git" target="_blank">Fillit [a 42 project]</a>.
 
