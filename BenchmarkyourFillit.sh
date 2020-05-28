@@ -11,6 +11,10 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Time default value. Set to 1 to benchmark time 0 not to time tests
+time=0
+
+
 # Bin name
 bin="fillit"
 
@@ -73,7 +77,7 @@ function launch_tests() {
 	for t in $@
 	do
 		display_test $t
-		diff <(./$ref_dir$bin $test_dir$t) <(./$bin $test_dir$t) &> diff.log
+		diff <((time ./$ref_dir$bin $test_dir$t) 2>timeA ) <((time ./$bin $test_dir$t) 2>timeB ) &> diff.log
 		if [[ $(cat diff.log) ]]
 		then
 			cat diff.log
@@ -82,7 +86,27 @@ function launch_tests() {
 			printf "\033[32m[OK]\033[0m\n"
 		fi
 		rm -rf diff.log
+		if ((time))
+		then
+			printf "\nref time:"
+			cat timeA && rm timeA
+			printf "\nyour time:"
+			cat timeB && rm timeB
+		fi
 	done
+}
+
+
+# Time question
+function do_yo_time() {
+	printf "\n"
+	local answer=''
+	read -p "Do you wish to benchmark time as well? [y/n] " answer
+	case $answer in
+		[Yy1]* )
+			printf "\033[38;5;227mExecution time will be benchmarked.\n"
+			time=1
+	esac
 }
 
 
@@ -137,4 +161,5 @@ function menu_exec() {
 # Main execution
 header
 pull_reference
+do_yo_time
 menu_exec
