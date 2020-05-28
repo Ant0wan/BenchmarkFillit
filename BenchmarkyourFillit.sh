@@ -43,7 +43,7 @@ function header() {
 function pull_reference() {
 	folder="ref/"
 	local url="https://github.com/Ant0wan/Fillit"
-	git clone $url $folder && cd $folder && make
+	git clone $url $folder && cd $folder && CFLAGS="-O3" make
 }
 
 
