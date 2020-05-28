@@ -11,6 +11,18 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Tests directory
+test_dir="tests/"
+
+
+# Tests .fillit
+invalid_test=("inv1.fillit")
+super_easy=()
+easy=()
+medium=()
+hardcore=()
+
+
 # Header
 function header() {
 	local line=("      _____ _____ __    ___               __                  __  " "     / __(_) / (_) /_  / _ )___ ___  ____/ /  __ _  ___ _____/ /__" "    / _// / / / / __/ / _  / -_) _ \\/ __/ _ \\/  ' \\/ _ \`/ __/  \'_/" "   /_/ /_/_/_/_/\__/ /____/\__/_//_/\__/_//_/_/_/_/\_,_/_/ /_/\\_\\    " "\n              last update 2020-05   version 1.1  script by abarthel\n\n")
@@ -22,23 +34,34 @@ function header() {
 	done
 }
 
+
 # Pull fillit used for benchmark
 function pull_reference() {
+	folder="ref/"
 	local url="https://github.com/Ant0wan/Fillit"
-	git clone $url && cd Fillit/ && make && cp -f fillit ../
-	rm -rf Fillit/
+	git clone $url $folder && cd $folder && make
 }
+
 
 # Display choice
 function display_choice() {
 	bar="=================================="
 	printf "\n\033[38;5;$1m$bar\n\t$opt\n$bar\n\033[0m"
+	sleep 1
 }
+
+
+# Display test
+function display_test() {
+	printf "\n> filename:\033[92m $1 \033[0m\n"
+}
+
 
 # Menu
 function menu_exec() {
 	local COLUMNS=12
-	local PS3="Please enter your choice: "
+	local PS3="
+	Please enter your choice: "
 	local options=("Test invalid inputs" "Super easy tests" "Easy tests" "Medium tests" "Hardcore tests" "Quit")
 	printf "\033[38;5;118mMENU\n\033[0m\n"
 	select opt in "${options[@]}"
@@ -46,6 +69,7 @@ function menu_exec() {
 		case $opt in
 			"Test invalid inputs")
 				display_choice 160
+				display_test "testname"
 				break
 				;;
 			"Super easy tests")
@@ -75,10 +99,12 @@ function menu_exec() {
 	exit
 }
 
+
 # Main execution
 header
 #pull_reference
 menu_exec
+
 
 ## Functions
 #s1=""
@@ -97,11 +123,6 @@ menu_exec
 
 
 ## Invalid Inputs
-#			printf "\n\033[31m==================================\033[0m\n"
-#			printf "\033[31m          INVALID INPUT       \033[0m\n"
-#			printf "\033[31m==================================\033[0m\n"
-#			sleep 1
-#
 #			printf "\n> filename: \033[92minv1.fillit\033[0m\n"
 #			printf "\033[94merror\033[0m\n"
 #			printf "\033[93min 0.003s\033[0m\n"
