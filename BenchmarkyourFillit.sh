@@ -29,6 +29,12 @@ function pull_reference() {
 	rm -rf Fillit/
 }
 
+# Display choice
+function display_choice() {
+	bar="=================================="
+	printf "\n\033[38;5;$1m$bar\n\t$opt\n$bar\n\033[0m"
+}
+
 # Menu
 function menu_exec() {
 	local COLUMNS=12
@@ -39,10 +45,25 @@ function menu_exec() {
 	do
 		case $opt in
 			"Test invalid inputs")
+				display_choice 160
+				break
+				;;
 			"Super easy tests")
+				display_choice 46
+				break
+				;;
 			"Easy tests")
+				display_choice 118
+				break
+				;;
 			"Medium tests")
+				display_choice 202
+				break
+				;;
 			"Hardcore tests")
+				display_choice 165
+				break
+				;;
 			"Quit")
 				break
 				;;
@@ -56,7 +77,7 @@ function menu_exec() {
 
 # Main execution
 header
-pull_reference
+#pull_reference
 menu_exec
 
 ## Functions
