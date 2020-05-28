@@ -11,8 +11,16 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Bin name
+bin="fillit"
+
+
 # Tests directory
 test_dir="tests/"
+
+
+# Reference directory
+ref_dir="ref/"
 
 
 # Tests .fillit
@@ -66,6 +74,7 @@ function launch_tests() {
 	for t in $@
 	do
 		display_test $t
+		diff <(./$ref_dir$bin $test_dir$t) <(./$bin $test_dir$t)
 	done
 }
 
@@ -83,23 +92,27 @@ function menu_exec() {
 		case $opt in
 			"Test invalid inputs")
 				display_choice 160
-				launch_tests ${super_easy[@]}
+				launch_tests ${invalid_test[@]}
 				break
 				;;
 			"Super easy tests")
 				display_choice 46
+				launch_tests ${super_easy[@]}
 				break
 				;;
 			"Easy tests")
 				display_choice 118
+				launch_tests ${easy[@]}
 				break
 				;;
 			"Medium tests")
 				display_choice 202
+				launch_tests ${medium[@]}
 				break
 				;;
 			"Hardcore tests")
 				display_choice 165
+				launch_tests ${hardcore[@]}
 				break
 				;;
 			"Quit")
