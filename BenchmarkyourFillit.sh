@@ -16,8 +16,8 @@ test_dir="tests/"
 
 
 # Tests .fillit
-invalid_test=("inv1.fillit")
-super_easy=()
+invalid_test=("inv1.fillit" "inv2.fillit" "inv3.fillit" "invalid_sample.fillit" "toomuch.fillit" "/dev/urandom" "." " " "*")
+super_easy=("valid_sample.fillit" "valid_sample_easy.fillit" "valid_subject_perfect.fillit" "single_square.fillit" "sample_subject1.fillit" "hardcore18.fillit" "benchmark3.fillit" "benchmark4.fillit" "benchmark5.fillit" "benchmark6.fillit" "benchmark7.fillit" "lines.fillit" "lines15.fillit" "lines16.fillit" "lines17.fillit" "lines18.fillit" "lines18bis.fillit" "squareinvert3x3_2tetri.fillit" "twopiecestricky.fillit")
 easy=()
 medium=()
 hardcore=()
