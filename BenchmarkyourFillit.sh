@@ -43,7 +43,7 @@ function header() {
 function pull_reference() {
 	folder="ref/"
 	local url="https://github.com/Ant0wan/Fillit"
-	git clone $url $folder && cd $folder && CFLAGS="-O3" make
+	git clone $url $folder && cd $folder && CFLAGS="-O3" make &>/dev/null
 }
 
 
@@ -61,8 +61,18 @@ function display_test() {
 }
 
 
+# Launch test
+function launch_tests() {
+	for t in $@
+	do
+		display_test $t
+	done
+}
+
+
 # Menu
 function menu_exec() {
+	printf "\n"
 	local COLUMNS=12
 	local PS3="
 	Please enter your choice: "
@@ -73,7 +83,7 @@ function menu_exec() {
 		case $opt in
 			"Test invalid inputs")
 				display_choice 160
-				display_test "testname"
+				launch_tests ${super_easy[@]}
 				break
 				;;
 			"Super easy tests")
@@ -106,7 +116,7 @@ function menu_exec() {
 
 # Main execution
 header
-#pull_reference
+pull_reference
 menu_exec
 
 
