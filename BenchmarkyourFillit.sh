@@ -17,10 +17,14 @@ test_dir="tests/"
 
 # Tests .fillit
 invalid_test=("inv1.fillit" "inv2.fillit" "inv3.fillit" "invalid_sample.fillit" "toomuch.fillit" "/dev/urandom" "." " " "*")
+
 super_easy=("valid_sample.fillit" "valid_sample_easy.fillit" "valid_subject_perfect.fillit" "single_square.fillit" "sample_subject1.fillit" "hardcore18.fillit" "benchmark3.fillit" "benchmark4.fillit" "benchmark5.fillit" "benchmark6.fillit" "benchmark7.fillit" "lines.fillit" "lines15.fillit" "lines16.fillit" "lines17.fillit" "lines18.fillit" "lines18bis.fillit" "squareinvert3x3_2tetri.fillit" "twopiecestricky.fillit")
+
 easy=("benchmark21.fillit" "valid_sample2.fillit" "benchmark8.fillit" "benchmark9.fillit" "benchmark10.fillit" "benchmark13.fillit" "alphabet_valid_sample.fillit")
-medium=("")
-hardcore=("")
+
+medium=("benchmark11.fillit" "benchmark12.fillit" "perfect_square_valid_sample.fillit")
+
+hardcore=("benchmark14.fillit" "benchmark15.fillit" "benchmark16.fillit" "benchmark17.fillit" "benchmark22.fillit" "benchmark.fillit" "lines19.fillit" "lines20.fillit" "lines26.fillit" "benchmark18.fillit" "benchmark19.fillit" "benchmark20.fillit")
 
 
 # Header
